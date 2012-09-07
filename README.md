@@ -14,6 +14,13 @@ Example
     ~$ fileflags 8513
      8513: O_WRONLY|O_DSYNC|O_CREAT|O_LARGEFILE
 
+Common Use Case
+---------------
+    dtrace -n 'syscall::open:entry / pid == <pid> / { trace(fds[arg0].fi_pathname); trace(fds[arg0].fi_oflags); }'
+     15  10130                      write:entry   /root/labs/data100m                   8513
+     15  10130                      write:entry   /root/labs/data100m                   8513
+     15  10130                      write:entry   /root/labs/data100m                   8513
+
 Installation
 ------------
 
