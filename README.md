@@ -16,7 +16,7 @@ Example
 
 Common Use Case
 ---------------
-    dtrace -n 'syscall::open:entry / pid == <pid> / { trace(fds[arg0].fi_pathname); trace(fds[arg0].fi_oflags); }'
+    dtrace -n 'syscall::write:entry / pid == <pid> / { trace(fds[arg0].fi_pathname); trace(fds[arg0].fi_oflags); }'
     dtrace: description 'syscall::write:entry ' matched 1 probe
      15  10130                      write:entry   /root/labs/data100m                   8513
      15  10130                      write:entry   /root/labs/data100m                   8513
