@@ -1,7 +1,8 @@
 fileflags
 =========
 
-Convert a decimal value into its respective o_flag's.
+Convert a decimal value into its respective oflag's.
+To see a description of each oflag see `man -s2 open`.
 
 Usage
 -----
